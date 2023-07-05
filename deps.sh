@@ -83,7 +83,7 @@ function install_yaffshiv
 
 function install_sasquatch
 {
-    git clone --quiet --depth 1 --branch "master" https://github.com/devttys0/sasquatch
+    git clone --quiet --depth 1 --branch "master" https://github.com/RobertLarsen/sasquatch
     (cd sasquatch && $SUDO ./build.sh)
     $SUDO rm -rf sasquatch
 }
@@ -115,8 +115,8 @@ function install_cramfstools
 
 function install_ubireader
 {
-    git clone --quiet --depth 1 --branch "master" https://github.com/jrspruitt/ubi_reader
-    (cd ubi_reader && $SUDO $PYTHON setup.py install)
+    git clone --quiet --depth 1 --branch "main" https://github.com/jrspruitt/ubi_reader
+    (cd ubi_reader && $SUDO $PYTHON -mpip install poetry && poetry install)
     $SUDO rm -rf ubi_reader
 }
 
